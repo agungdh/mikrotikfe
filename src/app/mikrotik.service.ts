@@ -6,7 +6,7 @@ import { logging } from 'protractor';
   providedIn: 'root'
 })
 export class MikrotikService {
-  private REST_API_SERVER = "http://127.0.0.1:8080";
+  private REST_API_SERVER = "https://api.mikrotik.bpkad.agungdh.com:82";
 
   constructor(private httpClient: HttpClient) { }
 
