@@ -6,12 +6,16 @@ import { logging } from 'protractor';
   providedIn: 'root'
 })
 export class MikrotikService {
-  private REST_API_SERVER = "http://192.168.0.3:8080";
+  private REST_API_SERVER = "http://127.0.0.1:8080";
 
   constructor(private httpClient: HttpClient) { }
 
-  public getMikrotikData() {
-    return this.httpClient.get(this.REST_API_SERVER + "/mikrotik/");
+  public getVpnData() {
+    return this.httpClient.get(this.REST_API_SERVER + "/mikrotik/vpn");
+  }
+
+  public getInterfaceData() {
+    return this.httpClient.get(this.REST_API_SERVER + "/mikrotik/interface");
   }
 }
 
@@ -52,4 +56,11 @@ export interface MikrotikStat {
   iconStat: InterfaceStat,
   indihomeStat: InterfaceStat,
   ppps: PppStat[],
+}
+
+export interface ResponseInterface {
+  icon: InterfaceMonitoring,
+  indihome: InterfaceMonitoring,
+  iconStat: InterfaceStat,
+  indihomeStat: InterfaceStat,
 }

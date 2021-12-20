@@ -2,7 +2,76 @@
   <div class="row">
     <div class="col-12">
       <div class="card card-primary">
-        interface compoment
+        <div class="card-header">Icon</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="card card-primary">
+                <div class="card-header">Upload</div>
+                <div class="card-body">
+                  <rg-gauge-chart
+                    [canvasWidth]="iconUpload.canvasWidth"
+                    [needleValue]="iconUpload.needleValue"
+                    [centralLabel]="iconUpload.centralLabel"
+                    [options]="iconUpload.options"
+                    [name]="iconUpload.name"
+                    [bottomLabel]="iconUpload.bottomLabel"></rg-gauge-chart>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card card-primary">
+                <div class="card-header">Download</div>
+                <div class="card-body">
+                  <rg-gauge-chart
+                    [canvasWidth]="iconDownload.canvasWidth"
+                    [needleValue]="iconDownload.needleValue"
+                    [centralLabel]="iconDownload.centralLabel"
+                    [options]="iconDownload.options"
+                    [name]="iconDownload.name"
+                    [bottomLabel]="iconDownload.bottomLabel"></rg-gauge-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card card-primary">
+        <div class="card-header">Indihome</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-6">
+              <div class="card card-primary">
+                <div class="card-header">Upload</div>
+                <div class="card-body">
+                  <rg-gauge-chart
+                    [canvasWidth]="indihomeUpload.canvasWidth"
+                    [needleValue]="indihomeUpload.needleValue"
+                    [centralLabel]="indihomeUpload.centralLabel"
+                    [options]="indihomeUpload.options"
+                    [name]="indihomeUpload.name"
+                    [bottomLabel]="indihomeUpload.bottomLabel"></rg-gauge-chart>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card card-primary">
+                <div class="card-header">Download</div>
+                <div class="card-body">
+                  <rg-gauge-chart
+                    [canvasWidth]="indihomeDownload.canvasWidth"
+                    [needleValue]="indihomeDownload.needleValue"
+                    [centralLabel]="indihomeDownload.centralLabel"
+                    [options]="indihomeDownload.options"
+                    [name]="indihomeDownload.name"
+                    [bottomLabel]="indihomeDownload.bottomLabel"></rg-gauge-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
