@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import Swal from 'sweetalert2';
 import { MikrotikService, MikrotikStat, PppStat } from '../../mikrotik.service';
 
 @Component({

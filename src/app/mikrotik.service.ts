@@ -3,24 +3,21 @@ import { Injectable } from '@angular/core';
 import { logging } from 'protractor';
 import { interval } from 'rxjs';
 import { retryWhen } from 'rxjs/operators';
-
+import { environment } from '../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class MikrotikService {
-  // private REST_API_SERVER = "https://api.mikrotik.bpkad.agungdh.com:82";
-  private REST_API_SERVER = "http://localhost:8080";
-
   constructor(private httpClient: HttpClient) { }
 
   public getVpnData() {
-    return this.httpClient.get(this.REST_API_SERVER + "/mikrotik/vpn").pipe(retryWhen(_ => {
+    return this.httpClient.get(environment.baseUrl + "/mikrotik/vpn").pipe(retryWhen(_ => {
       return interval(5000)
     }));
   }
 
   public getInterfaceData() {
-    return this.httpClient.get(this.REST_API_SERVER + "/mikrotik/interface").pipe(retryWhen(_ => {
+    return this.httpClient.get(environment.baseUrl + "/mikrotik/interface").pipe(retryWhen(_ => {
       return interval(5000)
     }));
   }

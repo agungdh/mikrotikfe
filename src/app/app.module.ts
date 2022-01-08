@@ -39,6 +39,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   imports: [
@@ -57,6 +58,7 @@ import { HttpClientModule } from '@angular/common/http';
     IconModule,
     IconSetModule.forRoot(),
     HttpClientModule,
+    SweetAlert2Module.forRoot(),
   ],
   declarations: [
     AppComponent,
@@ -71,4 +73,5 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   bootstrap: [ AppComponent ]
 })
+
 export class AppModule { }
